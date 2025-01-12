@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="css/quiz.css">
+  <script src="js/quiz.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <a href="index.html" class="back-button"><i class="fas fa-arrow-circle-left"></i></a>
+      <h1>Quiz Game</h1>
+    </div>
+
+    <div class="quiz-wrapper">
+      <div class="score-timer">
+        <div class="timer">Time: <span id="timer">30</span>s</div>
+        <div class="score">Score: <span id="score">0</span></div>
+      </div>
+
+      <div class="quiz-container">
+        <div class="question-container animated fadeIn">
+          <div class="question-number">Question <span id="question-number">1</span>:</div>
+          <div class="question-text" id="question-text"></div>
+        </div>
+
+        <div class="answer-container">
+          <div id="options" class="options-container animated slideInUp">
+            <!-- Options will be injected dynamically -->
+          </div>
+          <div class="hint-container">
+            <button class="hint-button" id="hint-button">Hint</button>
+            <div class="hint-display" id="hint-display"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result hidden animated zoomIn" id="result">
+        <h2>Quiz Over</h2>
+        <p class="final-score">Final Score: <span id="final-score">0</span></p>
+        <p class="total-time">Total Time Taken: <span id="total-time">0</span> seconds</p>
+        <button class="restart-button" id="restart-button">Restart Quiz</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

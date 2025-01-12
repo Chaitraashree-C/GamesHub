@@ -1,0 +1,192 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;      /* Center content vertically */
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;   /* Align elements in column layout */
+}
+
+.main-container {
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    animation: fadeIn 1s ease-in;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    color: #ff6347;
+    transform: scale(1.2);
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 10px;
+    color: #FFD700;
+    margin-bottom: 20px;  /* Adds spacing between heading and game-wrapper */
+}
+
+.game-wrapper {
+    display: flex;
+    justify-content: center;  /* Center the containers */
+    align-items: center;      /* Center the containers vertically */
+    gap: 30px;                /* Add gap between settings-container and tic-tac-toe-container */
+    width: 100%;               /* Limit the width of the game-wrapper */
+    max-width: 1200px;         /* Ensures it doesn't grow too large */
+    padding: 20px;            /* Adds padding inside the game-wrapper */
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;         /* Adds some space between heading and game-wrapper */
+}
+
+.settings-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.choose-opponent, .choose-symbol {
+    font-size: 18px;
+}
+
+.choose-opponent label, .choose-symbol label {
+    display: block; /* Ensures label is on its own line */
+    margin-bottom: 8px; /* Adds spacing between label and select */
+}
+
+.choose-opponent select, .choose-symbol select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    width: 100%; /* Ensures select takes the full width */
+}
+
+.tic-tac-toe-container {
+    width: 350px; /* Increased the width of the tic-tac-toe container */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px; /* Increased padding to make it larger inside */
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    width: 100%; /* Ensure board takes up the full width of its container */
+}
+
+.board div {
+    width: 100%; /* Make div take up the full width of the board */
+    height: 100px; /* Increased the height of each square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    font-size: 32px; /* Increased font size */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.board div:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Result Styling */
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    animation: fadeIn 1s ease-in-out;
+    background-color: #1E1E1E;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between result text and restart button */
+}
+
+#game-result {
+    margin-bottom: 10px; /* Adds space below the result text */
+}
+
+.restart-button {
+    padding: 10px 20px;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.restart-button:hover {
+    transform: scale(1.1);
+}
+
+/* Hidden class for hiding elements */
+.hidden {
+    display: none;
+}
+
+/* Animation */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

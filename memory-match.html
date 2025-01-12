@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Game</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/memory-match.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-circle-left"></i></a>
+        <h1>Memory Match Game</h1>
+    </div>
+
+    <div class="game-container">
+        <div class="controls">
+            <button class="grid-size" onclick="startGame(2)">2x2</button>
+            <button class="grid-size" onclick="startGame(4)">4x4</button>
+            <button class="grid-size" onclick="startGame(6)">6x6</button>
+            <button class="hint-button" onclick="showHint()">Hint</button>
+        </div>
+        <div id="game-board" class="game-board"></div>
+        <div id="hint-overlay" class="hint-overlay">
+            <div class="hint-cards"></div>
+        </div>
+    </div>
+
+    <script src="js/memory-match.js"></script>
+</body>
+</html>

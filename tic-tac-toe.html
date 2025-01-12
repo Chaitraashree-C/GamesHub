@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="css/tic-tac-toe.css">
+  <script src="js/tic-tac-toe.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <a href="index.html" class="back-button"><i class="fas fa-arrow-circle-left"></i></a>
+      <h1>Tic Tac Toe</h1>
+    </div>
+
+    <div class="game-wrapper">
+      <div class="settings-container">
+        <div class="choose-opponent">
+          <label for="opponent">Choose Opponent:</label>
+          <select id="opponent">
+            <option value="human">Human</option>
+            <option value="machine">Machine</option>
+          </select>
+        </div>
+        
+        <div class="choose-symbol">
+          <label for="symbol">Choose X or O:</label>
+          <select id="symbol">
+            <option value="X">X</option>
+            <option value="O">O</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tic-tac-toe-container">
+        <div class="board" id="board">
+          <!-- Tic Tac Toe grid will be injected here -->
+        </div>
+        <div class="result hidden" id="result">
+          <h2>Game Over</h2>
+          <p id="game-result"></p>
+          <button class="restart-button" id="restart-button">Restart Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

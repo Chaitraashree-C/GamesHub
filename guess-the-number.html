@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="css/guess-the-number.css">
+    <!-- Add Font Awesome for the icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="game-container">
+        <div class="header">
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-circle-left"></i></a>
+            <h1>Guess the Number</h1>
+        </div>
+
+        <div class="game-container">
+            <p class="instructions">Enter a range (e.g., 1 to 100)</p>
+            <div class="range-inputs">
+                <input type="number" id="min-range" class="input-field" placeholder="Min Range" min="1">
+                <input type="number" id="max-range" class="input-field" placeholder="Max Range" min="1">
+            </div>
+            <button id="set-range" class="set-range-button">Set Range</button>
+            <p id="range-error-message" class="range-error-message" style="display:none;"></p>
+            <div id="guess-section" style="display:none;">
+                <p class="instructions">Guess a number between <span id="range-display">?</span></p>
+                <input type="number" id="guess" class="input-field" placeholder="Enter your guess">
+                <button id="submit" class="submit-button">Submit</button>
+                <p id="message" class="message"></p>
+                <button id="hint" class="hint-button">Hint</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p id="attempts">Attempts: 0</p>
+            <button id="reset" class="reset-button">Play Again</button>
+        </div>
+    </div>
+
+    <script src="js/guess-the-number.js"></script>
+</body>
+</html>

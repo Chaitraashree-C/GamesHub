@@ -1,0 +1,116 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-out;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+/* Animation for header */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Game Containers */
+.games-container {
+    display: flex;
+    justify-content: space-around; /* Even spacing between the game containers */
+    gap: 10px; /* Small gap between containers */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    padding-top: 50px;
+}
+
+/* Game Card Styling */
+.game {
+    background-color: #222; /* Darker background for game containers */
+    flex: 0 1 22%; /* Smaller containers to fit in one row */
+    max-width: 250px; /* Smaller max width */
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #444; /* Subtle border */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hover Effect for Game Container */
+.game:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1); /* Slightly brighten on hover */
+}
+
+/* Image Styling */
+.game img {
+    width: 100%; /* Ensure image takes full width of its container */
+    height: 250px; /* Smaller height for images */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Title for Game Cards */
+.game h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #f4f4f4;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for title */
+.game:hover h3 {
+    color: #ff6347; /* Change color on hover */
+}
+
+/* Add smooth transition for page load */
+body {
+    animation: fadeInBody 2s ease-in-out;
+}
+
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Games Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- First Container (Header) -->
+        <div class="header-container">
+            <h1>Games Hub</h1>
+            <h2>Welcome to the gaming platform</h2>
+        </div>
+
+        <!-- Second Container (Games List) -->
+        <div class="games-container">
+            <!-- All Game Containers in a Single Row -->
+            <div class="game" onclick="window.location.href='guess-the-number.html'">
+                <img src="assets/images/guess-the-number.png" alt="Guess the Number">
+                <h3>Guess the Number</h3>
+            </div>
+            <div class="game" onclick="window.location.href='memory-match.html'">
+                <img src="assets/images/memory-match.png" alt="Memory Match">
+                <h3>Memory Match</h3>
+            </div>
+            <div class="game" onclick="window.location.href='quiz.html'">
+                <img src="assets/images/quiz.png" alt="Quiz">
+                <h3>Quiz</h3>
+            </div>
+            <div class="game" onclick="window.location.href='tic-tac-toe.html'">
+                <img src="assets/images/tic-tac-toe.png" alt="Tic Tac Toe">
+                <h3>Tic Tac Toe</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/guess-the-number.js"></script>
+    <script src="js/memory-match.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/tic-tac-toe.js"></script>
+</body>
+</html>
